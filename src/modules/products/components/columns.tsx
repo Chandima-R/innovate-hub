@@ -2,7 +2,7 @@
 
 import { Checkbox } from "@/components/ui/checkbox";
 import { ColumnDef } from "@tanstack/react-table";
-import { MessagesSquare, Plus } from "lucide-react";
+import { MessagesSquare, Plus, X } from "lucide-react";
 
 import {
   AlertDialog,
@@ -117,17 +117,19 @@ export const columns: ColumnDef<ProjectData>[] = [
                 />
               </AlertDialogTrigger>
               <AlertDialogContent>
-                <AlertDialogHeader>
-                  <AlertDialogTitle>Comments</AlertDialogTitle>
+                <AlertDialogHeader className="max-h-96 overflow-y-scroll">
+                  <div className="flex items-center justify-between w-full">
+                    <AlertDialogTitle>Comments</AlertDialogTitle>
+                    <AlertDialogCancel>
+                      <X />
+                    </AlertDialogCancel>
+                  </div>
                   {row.original.comments?.map((comment: any) => (
-                    <AlertDialogDescription>
+                    <AlertDialogDescription className="bg-slate-100 text-slate-500 p-2 max-h-96">
                       {comment.commentText}
                     </AlertDialogDescription>
                   ))}
                 </AlertDialogHeader>
-                <AlertDialogFooter>
-                  <AlertDialogCancel>close</AlertDialogCancel>
-                </AlertDialogFooter>
               </AlertDialogContent>
             </AlertDialog>
           )}

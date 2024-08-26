@@ -642,9 +642,9 @@ export const tableData = [
     ],
     categories: [
       {
-        categoryName: "publishing",
-        categoryColor: "indigo-200",
-        textColor: "indigo-700",
+        categoryName: "Publishing",
+        categoryColor: "fuchsia-200",
+        textColor: "fuchsia-700",
       },
       {
         categoryName: "B2C",
