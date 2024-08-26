@@ -5,7 +5,7 @@ export const accordionItems = [
     id: 1,
     productIcon: Folder,
     product: "Products",
-    link: "/products",
+    link: "/",
     items: [
       {
         icon: Minus,
