@@ -9,9 +9,11 @@ import {
   PlusIcon,
   SquarePlus,
   UserPlus,
+  X,
 } from "lucide-react";
 import {
   Accordion,
+  AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "../../../components/ui/accordion";
@@ -89,6 +91,12 @@ export const Navbar = () => {
                           <IconCard icon={item.icon} name={item.name} />
                         </>
                       ))}
+                      <AccordionContent>
+                        <div className="px-4 flex gap-2 items-center">
+                          <SquarePlus className="size-4 text-slate-500" />
+                          <p className="text-slate-400 text-sm">Add new sub</p>
+                        </div>
+                      </AccordionContent>
                     </AccordionItem>
                   </Link>
                 ))}

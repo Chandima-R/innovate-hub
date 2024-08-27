@@ -17,7 +17,6 @@ import {
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Archive, ChevronDown, Plus, Trash, X } from "lucide-react";
-import { IconButton } from "./icon-button";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];

@@ -33,7 +33,7 @@ export const accordionItems = [
     id: 2,
     productIcon: Folder,
     product: "Sales",
-    link: "/saltes",
+    link: "/sales",
     items: [
       {
         icon: Minus,
