@@ -115,7 +115,7 @@ export const Navbar = () => {
               <div className="bg-white rounded p-1">
                 <p className="text-xs font-light">7</p>
               </div>
-              <p className="text-sm font-semibold">Invite Teammates</p>
+              <p className="text-sm font-semibold">days left on trial</p>
             </div>
             <Button>Add billing</Button>
           </div>

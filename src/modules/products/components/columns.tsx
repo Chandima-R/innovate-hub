@@ -47,26 +47,24 @@ export const columns: ColumnDef<ProjectData>[] = [
   {
     id: "select",
     header: ({ table }) => (
-      <div className="flex items-center w-1/12">
-        <Checkbox
-          checked={
-            table.getIsAllPageRowsSelected() ||
-            (table.getIsSomePageRowsSelected() && "indeterminate")
-          }
-          onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
-          aria-label="Select all"
-        />
-      </div>
+      <Checkbox
+        checked={
+          table.getIsAllPageRowsSelected() ||
+          (table.getIsSomePageRowsSelected() && "indeterminate")
+        }
+        onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
+        aria-label="Select all"
+      />
     ),
     cell: ({ row }) => (
-      <div>
-        <Checkbox
-          checked={row.getIsSelected()}
-          onCheckedChange={(value) => row.toggleSelected(!!value)}
-          aria-label="Select row"
-        />
-      </div>
+      <Checkbox
+        checked={row.getIsSelected()}
+        onCheckedChange={(value) => row.toggleSelected(!!value)}
+        aria-label="Select row"
+      />
     ),
+    enableSorting: false,
+    enableHiding: false,
   },
   {
     accessorKey: "brandname",
@@ -121,7 +119,7 @@ export const columns: ColumnDef<ProjectData>[] = [
                   <div className="flex items-center justify-between w-full">
                     <AlertDialogTitle>Comments</AlertDialogTitle>
                     <AlertDialogCancel>
-                      <X />
+                      <X className="size-4" />
                     </AlertDialogCancel>
                   </div>
                   {row.original.comments?.map((comment: any) => (
@@ -295,7 +293,7 @@ export const columns: ColumnDef<ProjectData>[] = [
     accessorKey: "meetings",
     header: "Next Meeting",
     cell: ({ row }) => (
-      <div className="w-auto">
+      <div className="w-auto flex justify-start">
         {row.original.meetings.map((meeting, index) => (
           <div
             key={index}

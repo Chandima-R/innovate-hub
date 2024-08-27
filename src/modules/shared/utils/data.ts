@@ -120,7 +120,7 @@ export const tableData = [
     ],
     meetings: [
       {
-        meetingName: "tomorrow",
+        meetingName: "Tomorrow",
         meetingColor: "blue-200",
         textColor: "blue-700",
       },
@@ -177,7 +177,7 @@ export const tableData = [
     ],
     meetings: [
       {
-        meetingName: "tomorrow",
+        meetingName: "Tomorrow",
         meetingColor: "sky-200",
         textColor: "sky-700",
       },
@@ -556,7 +556,7 @@ export const tableData = [
     ],
     meetings: [
       {
-        meetingName: "Next Month",
+        meetingName: "Next month",
         meetingColor: "gray-200",
         textColor: "gray-700",
       },
