@@ -16,7 +16,7 @@ import {
 } from "@/components/ui/table";
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Archive, ChevronDown, Trash, X } from "lucide-react";
+import { Archive, ChevronDown, Plus, Trash, X } from "lucide-react";
 import { IconButton } from "./icon-button";
 
 interface DataTableProps<TData, TValue> {
@@ -41,11 +41,7 @@ export function DataTable<TData, TValue>({
   });
 
   // Effect to handle re-rendering when rowSelection changes
-  useEffect(() => {
-    // Log the current selection to debug
-    console.log("Row selection updated:", rowSelection);
-    // This effect will run whenever rowSelection changes
-  }, [rowSelection]);
+  useEffect(() => {}, [rowSelection]);
 
   // Function to reset all selected checkboxes
   const resetSelection = () => {
@@ -75,21 +71,61 @@ export function DataTable<TData, TValue>({
           </TableHeader>
           <TableBody>
             {table.getRowModel().rows?.length ? (
-              table.getRowModel().rows.map((row) => (
-                <TableRow
-                  key={row.id}
-                  data-state={row.getIsSelected() && "selected"}
-                >
-                  {row.getVisibleCells().map((cell) => (
-                    <TableCell key={cell.id}>
-                      {flexRender(
-                        cell.column.columnDef.cell,
-                        cell.getContext()
-                      )}
-                    </TableCell>
-                  ))}
+              <>
+                {table.getRowModel().rows.map((row) => (
+                  <TableRow
+                    key={row.id}
+                    data-state={row.getIsSelected() && "selected"}
+                  >
+                    {row.getVisibleCells().map((cell) => (
+                      <TableCell key={cell.id}>
+                        {flexRender(
+                          cell.column.columnDef.cell,
+                          cell.getContext()
+                        )}
+                      </TableCell>
+                    ))}
+                  </TableRow>
+                ))}
+                <TableRow>
+                  <TableCell></TableCell>
+                  <TableCell>
+                    <div className="flex justify-end items-center">
+                      <span className="font-semibold mr-2">
+                        {table.getRowModel().rows.length}
+                      </span>{" "}
+                      count
+                    </div>
+                  </TableCell>
+                  <TableCell>
+                    <div className="flex text-slate-400 items-center">
+                      <Plus className="size-4 mr-2" />
+                      Add calculation
+                    </div>
+                  </TableCell>
+                  <TableCell>
+                    <div className="flex text-slate-400 items-center">
+                      <Plus className="size-4 mr-2" />
+                      Add calculation
+                    </div>
+                  </TableCell>
+                  <TableCell>
+                    <div className="flex text-slate-400 items-center">
+                      <Plus className="size-4 mr-2" />
+                      Add Ccculation
+                    </div>
+                  </TableCell>
+                  <TableCell>
+                    <div className="flex text-slate-400 items-center">
+                      <Plus className="size-4 mr-2" />
+                      Add calculation
+                    </div>
+                  </TableCell>
+                  <TableCell>
+                    <div className="flex text-slate-400 items-center"></div>
+                  </TableCell>
                 </TableRow>
-              ))
+              </>
             ) : (
               <TableRow>
                 <TableCell

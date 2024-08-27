@@ -35,8 +35,8 @@ export const tableData = [
       {
         memberName: "walter atkinson",
         image: "",
-        imageBackground: "yellow-200",
-        textColor: "yellow-700",
+        imageBackground: "#FEF08A",
+        textColor: "#A16207",
       },
       {
         memberName: "member five",
@@ -47,8 +47,8 @@ export const tableData = [
     categories: [
       {
         categoryName: "Automation",
-        categoryColor: "purple-200",
-        textColor: "purple-700",
+        categoryColor: "#E9D5FF",
+        textColor: "#7E22CE",
       },
     ],
     tags: [
@@ -65,8 +65,8 @@ export const tableData = [
     meetings: [
       {
         meetingName: "in 30 minutes",
-        meetingColor: "green-200",
-        textColor: "green-700",
+        meetingColor: "#BBF7D0",
+        textColor: "#15803D",
       },
     ],
   },
@@ -84,8 +84,8 @@ export const tableData = [
       {
         memberName: "sara adler",
         image: "",
-        imageBackground: "green-200",
-        textColor: "green-700",
+        imageBackground: "#BBF7D0",
+        textColor: "#15803D",
       },
       {
         memberName: "member three",
@@ -101,13 +101,13 @@ export const tableData = [
     categories: [
       {
         categoryName: "E-commerce",
-        categoryColor: "rose-200",
-        textColor: "rose-700",
+        categoryColor: "#FECDD3",
+        textColor: "#BE123C",
       },
       {
         categoryName: "B2B",
-        categoryColor: "yellow-200",
-        textColor: "yellow-700",
+        categoryColor: "#FEF08A",
+        textColor: "#A16207",
       },
     ],
     tags: [
@@ -121,8 +121,8 @@ export const tableData = [
     meetings: [
       {
         meetingName: "Tomorrow",
-        meetingColor: "blue-200",
-        textColor: "blue-700",
+        meetingColor: "#BFDBFE",
+        textColor: "#1D4ED8",
       },
     ],
   },
@@ -151,20 +151,20 @@ export const tableData = [
       {
         memberName: "jason stathem",
         image: "",
-        imageBackground: "amber-200",
-        textColor: "amber-700",
+        imageBackground: "#FDE68A",
+        textColor: "#B45309",
       },
     ],
     categories: [
       {
         categoryName: "SAAS",
-        categoryColor: "green-200",
-        textColor: "green-700",
+        categoryColor: "#BBF7D0",
+        textColor: "#15803D",
       },
       {
         categoryName: "mobile",
-        categoryColor: "amber-200",
-        textColor: "amber-700",
+        categoryColor: "#FDE68A",
+        textColor: "#B45309",
       },
     ],
     tags: [
@@ -178,8 +178,8 @@ export const tableData = [
     meetings: [
       {
         meetingName: "Tomorrow",
-        meetingColor: "sky-200",
-        textColor: "sky-700",
+        meetingColor: "#BAE6FD",
+        textColor: "#0369A1",
       },
     ],
   },
@@ -220,8 +220,8 @@ export const tableData = [
       {
         memberName: "younus taheed",
         image: "",
-        imageBackground: "orange-200",
-        textColor: "orange-700",
+        imageBackground: "#FED7AA",
+        textColor: "#C2410C",
       },
       {
         memberName: "member three",
@@ -231,8 +231,8 @@ export const tableData = [
       {
         memberName: "kate marleen",
         image: "",
-        imageBackground: "blue-200",
-        textColor: "blue-700",
+        imageBackground: "#BFDBFE",
+        textColor: "#1D4ED8",
       },
       {
         memberName: "member four",
@@ -248,8 +248,8 @@ export const tableData = [
     categories: [
       {
         categoryName: "Marketplace",
-        categoryColor: "emerald-200",
-        textColor: "emerald-700",
+        categoryColor: "#A7F3D0",
+        textColor: "#047857",
       },
     ],
     tags: [
@@ -263,8 +263,8 @@ export const tableData = [
     meetings: [
       {
         meetingName: "in 6 hours",
-        meetingColor: "green-200",
-        textColor: "green-700",
+        meetingColor: "#BBF7D0",
+        textColor: "#15803D",
       },
     ],
   },
@@ -289,13 +289,13 @@ export const tableData = [
     categories: [
       {
         categoryName: "B2B",
-        categoryColor: "yellow-200",
-        textColor: "yellow-700",
+        categoryColor: "#FEF08A",
+        textColor: "#A16207",
       },
       {
         categoryName: "B2C",
-        categoryColor: "lime-200",
-        textColor: "lime-700",
+        categoryColor: "#D9F99D",
+        textColor: "#4D7C0F",
       },
     ],
     tags: [
@@ -306,8 +306,8 @@ export const tableData = [
     meetings: [
       {
         meetingName: "No contact",
-        meetingColor: "red-200",
-        textColor: "red-700",
+        meetingColor: "#FECACA",
+        textColor: "#B91C1C",
       },
     ],
   },
@@ -364,8 +364,8 @@ export const tableData = [
       {
         memberName: "jay lomork",
         image: "",
-        imageBackground: "green-200",
-        textColor: "green-700",
+        imageBackground: "#BBF7D0",
+        textColor: "#15803D",
       },
       {
         memberName: "member three",
@@ -376,13 +376,13 @@ export const tableData = [
     categories: [
       {
         categoryName: "Technology",
-        categoryColor: "teal-200",
-        textColor: "teal-700",
+        categoryColor: "#99F6E4",
+        textColor: "#0F766E",
       },
       {
         categoryName: "SAAS",
-        categoryColor: "green-200",
-        textColor: "green-700",
+        categoryColor: "#BBF7D0",
+        textColor: "#15803D",
       },
     ],
     tags: [
@@ -396,8 +396,8 @@ export const tableData = [
     meetings: [
       {
         meetingName: "in 1 hour",
-        meetingColor: "green-200",
-        textColor: "green-700",
+        meetingColor: "#BBF7D0",
+        textColor: "#15803D",
       },
     ],
   },
@@ -447,8 +447,8 @@ export const tableData = [
       {
         memberName: "Ford Keemer",
         image: "",
-        imageBackground: "purple-200",
-        textColor: "purple-700",
+        imageBackground: "#E9D5FF",
+        textColor: "#7E22CE",
       },
       {
         memberName: "member three",
@@ -473,8 +473,8 @@ export const tableData = [
       {
         memberName: "Ford Keemer",
         image: "",
-        imageBackground: "purple-200",
-        textColor: "purple-700",
+        imageBackground: "#E9D5FF",
+        textColor: "#7E22CE",
       },
       {
         memberName: "member three",
@@ -490,13 +490,13 @@ export const tableData = [
     categories: [
       {
         categoryName: "Finance",
-        categoryColor: "yellow-200",
-        textColor: "yellow-700",
+        categoryColor: "#FEF08A",
+        textColor: "#A16207",
       },
       {
         categoryName: "Automation",
-        categoryColor: "violet-200",
-        textColor: "violet-700",
+        categoryColor: "#DDD6FE",
+        textColor: "#6D28D9",
       },
     ],
     tags: [
@@ -510,8 +510,8 @@ export const tableData = [
     meetings: [
       {
         meetingName: "in 30 minutes",
-        meetingColor: "green-200",
-        textColor: "green-700",
+        meetingColor: "#BBF7D0",
+        textColor: "#15803D",
       },
     ],
   },
@@ -535,15 +535,15 @@ export const tableData = [
       {
         memberName: "jay sean",
         image: "",
-        imageBackground: "orange-200",
-        textColor: "orange-700",
+        imageBackground: "#FED7AA",
+        textColor: "#C2410C",
       },
     ],
     categories: [
       {
         categoryName: "Transportation",
-        categoryColor: "yellow-200",
-        textColor: "yellow-700",
+        categoryColor: "#FEF08A",
+        textColor: "#A16207",
       },
     ],
     tags: [
@@ -557,8 +557,8 @@ export const tableData = [
     meetings: [
       {
         meetingName: "Next month",
-        meetingColor: "gray-200",
-        textColor: "gray-700",
+        meetingColor: "#E5E7EB",
+        textColor: "#374151",
       },
     ],
   },
@@ -625,8 +625,8 @@ export const tableData = [
       {
         memberName: "tony victor",
         image: "",
-        imageBackground: "teal-200",
-        textColor: "teal-700",
+        imageBackground: "#99F6E4",
+        textColor: "#0F766E",
       },
       {
         memberName: "member three",
@@ -636,20 +636,20 @@ export const tableData = [
       {
         memberName: "sonny ferdinand",
         image: "",
-        imageBackground: "blue-200",
-        textColor: "blue-700",
+        imageBackground: "#BFDBFE",
+        textColor: "#1D4ED8",
       },
     ],
     categories: [
       {
         categoryName: "Publishing",
-        categoryColor: "fuchsia-200",
-        textColor: "fuchsia-700",
+        categoryColor: "#F5D0FE",
+        textColor: "#A21CAF",
       },
       {
         categoryName: "B2C",
-        categoryColor: "lime-200",
-        textColor: "lime-700",
+        categoryColor: "#D9F99D",
+        textColor: "#4D7C0F",
       },
     ],
     tags: [
@@ -663,8 +663,8 @@ export const tableData = [
     meetings: [
       {
         meetingName: "No contact",
-        meetingColor: "red-200",
-        textColor: "red-700",
+        meetingColor: "#FECACA",
+        textColor: "#B91C1C",
       },
     ],
   },
@@ -688,8 +688,8 @@ export const tableData = [
     categories: [
       {
         categoryName: "Web services",
-        categoryColor: "teal-200",
-        textColor: "teal-700",
+        categoryColor: "#99F6E4",
+        textColor: "#0F766E",
       },
     ],
     tags: [
@@ -700,8 +700,8 @@ export const tableData = [
     meetings: [
       {
         meetingName: "Next month",
-        meetingColor: "red-200",
-        textColor: "red-700",
+        meetingColor: "#FECACA",
+        textColor: "#B91C1C",
       },
     ],
   },

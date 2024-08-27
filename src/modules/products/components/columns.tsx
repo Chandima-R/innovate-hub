@@ -174,7 +174,11 @@ export const columns: ColumnDef<ProjectData>[] = [
                 />
               ) : (
                 <div
-                  className={`w-8 h-8 rounded-full flex items-center justify-center border border-white bg-${member.imageBackground} text-${member.textColor} cursor-pointer`}
+                  className={`w-8 h-8 rounded-full flex items-center justify-center border border-white cursor-pointer`}
+                  style={{
+                    backgroundColor: member.imageBackground,
+                    color: member.textColor,
+                  }}
                 >
                   {member.memberName
                     .split(" ")
@@ -198,7 +202,11 @@ export const columns: ColumnDef<ProjectData>[] = [
 
                   {!member?.image && (
                     <div
-                      className={`w-10 h-10 rounded-full object-cover mb-2 flex items-center justify-center border bg-${member.imageBackground} text-${member.textColor}`}
+                      className={`w-10 h-10 rounded-full object-cover mb-2 flex items-center justify-center border`}
+                      style={{
+                        backgroundColor: member.imageBackground,
+                        color: member.textColor,
+                      }}
                     >
                       {member.memberName
                         .split(" ")
@@ -236,7 +244,11 @@ export const columns: ColumnDef<ProjectData>[] = [
                         />
                       ) : (
                         <div
-                          className={`w-8 h-8 rounded-full flex items-center justify-center border bg-${member.imageBackground} text-${member.textColor}`}
+                          className={`w-8 h-8 rounded-full flex items-center justify-center border`}
+                          style={{
+                            backgroundColor: member.imageBackground,
+                            color: member.textColor,
+                          }}
                         >
                           {member.memberName
                             .split(" ")
@@ -261,11 +273,15 @@ export const columns: ColumnDef<ProjectData>[] = [
     accessorKey: "categories",
     header: "Categories",
     cell: ({ row }) => (
-      <div className="w-full">
+      <div className="flex flex-wrap gap-2">
         {row.original.categories.map((category, index) => (
           <span
             key={index}
-            className={`bg-${category.categoryColor} text-${category.textColor} px-2 py-1 rounded`}
+            className="px-2 py-1 rounded text-xs"
+            style={{
+              backgroundColor: category.categoryColor,
+              color: category.textColor,
+            }}
           >
             {category.categoryName}
           </span>
@@ -277,12 +293,9 @@ export const columns: ColumnDef<ProjectData>[] = [
     accessorKey: "tags",
     header: "Tags",
     cell: ({ row }) => (
-      <div className="overflow-hidden w-[350px]">
+      <div className="flex flex-wrap gap-1">
         {row.original.tags.map((tag, index) => (
-          <span
-            key={index}
-            className="bg-gray-200 text-gray-800 px-2 py-1 rounded mr-2"
-          >
+          <span key={index} className="px-2 py-1 bg-gray-200 rounded text-xs">
             {tag.tagName}
           </span>
         ))}
@@ -291,26 +304,33 @@ export const columns: ColumnDef<ProjectData>[] = [
   },
   {
     accessorKey: "meetings",
-    header: "Next Meeting",
+    header: "Meetings",
     cell: ({ row }) => (
-      <div className="w-auto flex justify-start">
+      <div className="flex flex-wrap gap-2">
         {row.original.meetings.map((meeting, index) => (
-          <div
+          <span
             key={index}
-            className={`bg-${meeting.meetingColor} text-${meeting.textColor} px-2 py-1 rounded w-auto flex items-center justify-center`}
+            className="px-2 py-1 rounded text-xs"
+            style={{
+              backgroundColor: meeting.meetingColor,
+              color: meeting.textColor,
+            }}
           >
             {meeting.meetingName}
-          </div>
+          </span>
         ))}
       </div>
     ),
   },
   {
-    accessorKey: "addRow",
-    header: ({ table }) => (
-      <div className="flex items-center w-full">
-        <Plus className="size-4 cursor-pointer" />
-      </div>
-    ),
+    id: "footer",
+    footer: ({ table }) => {
+      const totalBrands = table.getCoreRowModel().rows.length;
+      return (
+        <div className="font-semibold text-lg text-right">
+          Total Brands: {totalBrands}
+        </div>
+      );
+    },
   },
 ];
