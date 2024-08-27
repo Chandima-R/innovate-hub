@@ -19,7 +19,7 @@ export const TableButton = ({
   return (
     <Button
       className="border flex items-center justify-center p-1 rounded min-w-10 h-10 w-auto cursor-pointer hover:bg-slate-200"
-      onClick={customFn} // Call customFn directly
+      onClick={customFn}
       variant="ghost"
       disabled={disabled}
     >

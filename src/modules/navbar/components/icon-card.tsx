@@ -1,6 +1,7 @@
 import { LucideIcon } from "lucide-react";
 import { AccordionContent } from "../../../components/ui/accordion";
 
+// type definitions for props of IconCard
 interface Props {
   icon: LucideIcon;
   name: string;

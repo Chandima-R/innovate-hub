@@ -27,6 +27,7 @@ import {
 } from "@/components/ui/select";
 import { toast } from "@/components/ui/use-toast";
 
+// form schema for add brand form
 const FormSchema = z.object({
   brandName: z.string().min(2, {
     message: "Brand name must be at least 2 characters.",
@@ -40,6 +41,7 @@ const FormSchema = z.object({
 export const AddProductForm = () => {
   const [imagePreview, setImagePreview] = useState<string | null>(null);
 
+  // form to add brand
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -67,6 +69,7 @@ export const AddProductForm = () => {
     },
   });
 
+  // submit function to add brand
   function onSubmit(data: z.infer<typeof FormSchema>) {
     toast({
       title: "You submitted the following values:",
@@ -81,6 +84,7 @@ export const AddProductForm = () => {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="w-full space-y-6">
+        {/* form component to upload brand logo */}
         <FormField
           control={form.control}
           name="image"
@@ -125,6 +129,7 @@ export const AddProductForm = () => {
           )}
         />
 
+        {/* form component to add brand name */}
         <FormField
           control={form.control}
           name="brandName"
@@ -140,6 +145,7 @@ export const AddProductForm = () => {
           )}
         />
 
+        {/* form component to add brand category */}
         <FormField
           control={form.control}
           name="category"

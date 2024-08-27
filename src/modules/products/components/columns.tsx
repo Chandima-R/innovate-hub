@@ -6,11 +6,9 @@ import { MessagesSquare, Plus, X } from "lucide-react";
 
 import {
   AlertDialog,
-  AlertDialogAction,
   AlertDialogCancel,
   AlertDialogContent,
   AlertDialogDescription,
-  AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
@@ -20,6 +18,7 @@ import { IconButton } from "./icon-button";
 import { truncateString } from "@/modules/shared/utils/truncate-string";
 import { AddProductForm } from "./add-product-form";
 
+// type definitions for project data where this will be the data for columns of the table
 export type ProjectData = {
   brandname: string;
   brandLogo: string;
@@ -44,8 +43,10 @@ export type ProjectData = {
   }[];
 };
 
+// column definitions for the table
 export const columns: ColumnDef<ProjectData>[] = [
   {
+    // check box column
     id: "select",
     header: ({ table }) => (
       <Checkbox
@@ -67,6 +68,7 @@ export const columns: ColumnDef<ProjectData>[] = [
     enableSorting: false,
     enableHiding: false,
   },
+  // barndname column
   {
     accessorKey: "brandname",
     header: ({ table }) => (
@@ -135,6 +137,7 @@ export const columns: ColumnDef<ProjectData>[] = [
       </div>
     ),
   },
+  // description column
   {
     accessorKey: "description",
     header: "Description",
@@ -146,6 +149,7 @@ export const columns: ColumnDef<ProjectData>[] = [
       </div>
     ),
   },
+  // members column
   {
     accessorKey: "members",
     header: "Members",
@@ -269,6 +273,7 @@ export const columns: ColumnDef<ProjectData>[] = [
       );
     },
   },
+  // categories column
   {
     accessorKey: "categories",
     header: "Categories",
@@ -302,6 +307,7 @@ export const columns: ColumnDef<ProjectData>[] = [
       </div>
     ),
   },
+  // meetings column
   {
     accessorKey: "meetings",
     header: "Meetings",
@@ -322,6 +328,7 @@ export const columns: ColumnDef<ProjectData>[] = [
       </div>
     ),
   },
+  // footer column
   {
     id: "footer",
     footer: ({ table }) => {

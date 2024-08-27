@@ -1,5 +1,6 @@
 import { PenTool, Megaphone, ChevronsLeftRight, Command } from "lucide-react";
 
+// teams data for the teams section in side menu bar
 export const teams = [
   {
     icon: PenTool,

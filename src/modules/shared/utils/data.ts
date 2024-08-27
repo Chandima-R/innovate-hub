@@ -1,3 +1,5 @@
+// whole dataset of the table
+
 export const tableData = [
   {
     brandname: "wix",

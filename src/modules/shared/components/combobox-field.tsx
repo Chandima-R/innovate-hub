@@ -53,6 +53,7 @@ export function ComboboxField({
     }
   };
 
+  // this is the shared component for combobox, which used to filter brands, tags etc
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>

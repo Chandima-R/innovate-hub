@@ -1,5 +1,6 @@
 import { LucideIcon } from "lucide-react";
 
+// type definitions for props in TeamCard
 interface Props {
   icon: LucideIcon;
   name: string;

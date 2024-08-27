@@ -1,5 +1,5 @@
 import { LucideIcon } from "lucide-react";
-
+// type definitions for the IconButton
 interface Props {
   icon: LucideIcon;
   customFn?: () => void;

@@ -44,7 +44,6 @@ export function DataTable<TData, TValue>({
 
   // Function to reset all selected checkboxes
   const resetSelection = () => {
-    console.log("Resetting selection"); // Debugging: Check if function is called
     setRowSelection({});
   };
 
@@ -86,6 +85,7 @@ export function DataTable<TData, TValue>({
                     ))}
                   </TableRow>
                 ))}
+                {/* last row of the table */}
                 <TableRow>
                   <TableCell></TableCell>
                   <TableCell>
@@ -138,6 +138,8 @@ export function DataTable<TData, TValue>({
           </TableBody>
         </Table>
       </div>
+
+      {/* footer section of the table which holds the archive, delete, more buttons*/}
       {Object.keys(rowSelection).length > 0 && (
         <div className="flex items-center justify-center w-full mx-auto shadow rounded mt-6 mb-4">
           <div className="text-sm text-muted-foreground flex items-center gap-2 bg-slate-50 p-2">

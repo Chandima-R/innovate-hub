@@ -1,5 +1,6 @@
 import { Folder, Minus } from "lucide-react";
 
+// data for the dropdown sections
 export const accordionItems = [
   {
     id: 1,
