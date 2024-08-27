@@ -119,8 +119,11 @@ export const columns: ColumnDef<ProjectData>[] = [
                       <X className="size-4" />
                     </AlertDialogCancel>
                   </div>
-                  {row.original.comments?.map((comment: any) => (
-                    <AlertDialogDescription className="bg-slate-100 text-slate-500 p-2 max-h-96">
+                  {row.original.comments?.map((comment: any, index) => (
+                    <AlertDialogDescription
+                      key={index}
+                      className="bg-slate-100 text-slate-500 p-2 max-h-96"
+                    >
                       {comment.commentText}
                     </AlertDialogDescription>
                   ))}

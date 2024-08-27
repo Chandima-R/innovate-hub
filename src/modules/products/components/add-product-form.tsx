@@ -3,7 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { useDropzone } from "react-dropzone";
+import { useDropzone, FileWithPath, Accept } from "react-dropzone"; // Import Accept
 import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
@@ -49,15 +49,21 @@ export const AddProductForm = () => {
     },
   });
 
-  const { getRootProps, getInputProps } = useDropzone({
-    accept: "image/*",
-    onDrop: (acceptedFiles) => {
-      const file = acceptedFiles[0];
-      form.setValue("image", file);
+  const accept: Accept = {
+    "image/*": [], // This tells dropzone to accept all image types
+  };
 
-      // Create a URL for the image and set it to state
-      const previewUrl = URL.createObjectURL(file);
-      setImagePreview(previewUrl);
+  const { getRootProps, getInputProps } = useDropzone({
+    accept,
+    onDrop: (acceptedFiles: FileWithPath[]) => {
+      if (acceptedFiles.length > 0) {
+        const file = acceptedFiles[0];
+        form.setValue("image", file);
+
+        // Create a URL for the image and set it to state
+        const previewUrl = URL.createObjectURL(file);
+        setImagePreview(previewUrl);
+      }
     },
   });
 
@@ -95,7 +101,8 @@ export const AddProductForm = () => {
                 <input {...getInputProps()} />
                 {!imagePreview && (
                   <p className="text-center text-sm text-gray-500">
-                    Drag 'n' drop an image here, or click to select one
+                    Drag &lsquo;n&rsquo; drop an image here, or click to select
+                    one
                   </p>
                 )}
                 {imagePreview && (

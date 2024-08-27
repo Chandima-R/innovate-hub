@@ -8,8 +8,8 @@ const UnderConstruction = () => {
           🚧 Under Construction 🚧
         </h1>
         <p className="text-lg text-gray-600 mb-8">
-          We're working hard to bring you something amazing. Please check back
-          later.
+          We&slquo;re working hard to bring you something amazing. Please check
+          back later.
         </p>
         <div className="flex items-center space-x-4 justify-center">
           <a
