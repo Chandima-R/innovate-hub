@@ -5,6 +5,7 @@ import { CategotyTitle } from "@/modules/shared/components/category-title";
 import { IconButton } from "./icon-button";
 import {
   ArrowUpAZ,
+  Circle,
   CirclePlus,
   Download,
   MessagesSquare,
@@ -12,6 +13,7 @@ import {
   Search,
   Settings,
   SlidersHorizontal,
+  X,
 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { ProductTable } from "./products-table";
@@ -19,6 +21,18 @@ import { tableData } from "@/modules/shared/utils/data";
 import { ComboboxField } from "@/modules/shared/components/combobox-field";
 import { TableButton } from "@/modules/shared/components/tableButton";
 import { Button } from "@/components/ui/button";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
+import { Calendar } from "@/components/ui/calendar";
 
 export const Product = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -177,7 +191,27 @@ export const Product = () => {
         </div>
 
         <div className="flex gap-2 items-start">
-          <TableButton icon={CirclePlus} text="Meeting" disabled={false} />
+          <AlertDialog>
+            <AlertDialogTrigger className="border flex items-center justify-center p-1 rounded min-w-10 h-10 w-auto cursor-pointer hover:bg-slate-200">
+              <CirclePlus className="size-4 mr-2" />
+              Meeting
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader className="flex flex-col items-center justify-center">
+                <div className="flex items-center justify-between w-full">
+                  <AlertDialogTitle>Schedule new meeting</AlertDialogTitle>
+                  <AlertDialogCancel>
+                    <X className="size-4" />
+                  </AlertDialogCancel>
+                </div>
+
+                <Calendar />
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogAction>Add Schedule</AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
           <TableButton
             icon={Download}
             text="Import / Export"

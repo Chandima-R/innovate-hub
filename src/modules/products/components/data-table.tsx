@@ -111,7 +111,7 @@ export function DataTable<TData, TValue>({
                   <TableCell>
                     <div className="flex text-slate-400 items-center">
                       <Plus className="size-4 mr-2" />
-                      Add Ccculation
+                      Add calculation
                     </div>
                   </TableCell>
                   <TableCell>

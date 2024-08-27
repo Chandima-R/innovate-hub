@@ -18,6 +18,7 @@ import {
 import Image from "next/image";
 import { IconButton } from "./icon-button";
 import { truncateString } from "@/modules/shared/utils/truncate-string";
+import { AddProductForm } from "./add-product-form";
 
 export type ProjectData = {
   brandname: string;
@@ -76,17 +77,13 @@ export const columns: ColumnDef<ProjectData>[] = [
             <Plus className="size-4 cursor-pointer" />
           </AlertDialogTrigger>
           <AlertDialogContent>
-            <AlertDialogHeader>
-              <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
-              <AlertDialogDescription>
-                This action cannot be undone. This will permanently delete your
-                account and remove your data from our servers.
-              </AlertDialogDescription>
-            </AlertDialogHeader>
-            <AlertDialogFooter>
-              <AlertDialogCancel>Cancel</AlertDialogCancel>
-              <AlertDialogAction>Continue</AlertDialogAction>
-            </AlertDialogFooter>
+            <div className="flex items-center justify-between w-full">
+              <AlertDialogTitle>Add new barnd</AlertDialogTitle>
+              <AlertDialogCancel>
+                <X className="size-4" />
+              </AlertDialogCancel>
+            </div>
+            <AddProductForm />
           </AlertDialogContent>
         </AlertDialog>
       </div>
