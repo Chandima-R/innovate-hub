@@ -10,23 +10,24 @@ interface Props {
 }
 
 export const TableButton = ({
-  icon,
+  icon: Icon,
   customFn,
   count,
   text,
   disabled,
 }: Props) => {
-  const Icon = icon;
   return (
     <Button
       className="border flex items-center justify-center p-1 rounded min-w-10 h-10 w-auto cursor-pointer hover:bg-slate-200"
-      onClick={() => customFn}
-      variant={"ghost"}
+      onClick={customFn} // Call customFn directly
+      variant="ghost"
       disabled={disabled}
     >
       <Icon className="size-4" />
-      <p className="text-sm ml-1">{count}</p>
-      <p className="text-sm ml-">{text}</p>
+      {count !== undefined && count !== null && (
+        <p className="text-sm ml-1">{count}</p>
+      )}
+      {text && <p className="text-sm ml-1">{text}</p>}
     </Button>
   );
 };
